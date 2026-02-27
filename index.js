@@ -1,6 +1,8 @@
+import dotenv from "dotenv";
 import express from "express";
 import expressLayouts from "express-ejs-layouts";
 import mongoose from "mongoose";
+dotenv.config();
 const app = express();
 app.use(expressLayouts)
 app.set("layout", "layout")
