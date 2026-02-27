@@ -12,7 +12,7 @@ const dbConnect = async () => {
     await mongoose.connect(process.env.MONGO_URI);
 };
 const startServer = async () => {
-    await dbConnect()
+    await dbConnect();
     app.listen(8080, () => console.log("Server started"));
 };
 const productSchema = mongoose.Schema({
