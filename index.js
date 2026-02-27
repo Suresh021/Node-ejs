@@ -9,7 +9,7 @@ app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const dbConnect = async () => {
-    await mongoose.connect("mongodb://localhost:27017/merndatabase");
+    await mongoose.connect(process.env.MONGO_URI);
 };
 const startServer = async () => {
     await dbConnect();
